@@ -1,0 +1,15 @@
+.Todo{
+    text-align: center;
+}
+
+.completed{
+    text-decoration: line-through;
+}
+
+
+.listbox{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
