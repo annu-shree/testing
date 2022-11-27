@@ -1,0 +1,56 @@
+import React from "react";
+import moment from "moment";
+
+const Sidebar = (props) => {
+  const { type, temp, location, date } = props.data;
+  const tempunit = props.tempunit;
+  function openSearch() {
+    props.setOpen(true);
+  }
+
+  return (
+    <div className="sidebar">
+      <div className="searchpannel">
+        <button className="searchbutton" onClick={openSearch}>
+          Search for location
+        </button>
+        <div className="sideicon">
+          <i>
+            <span class="material-symbols-outlined">my_location</span>
+          </i>
+        </div>
+      </div>
+
+      <div className="wthrimg">
+        <img
+          src={`./wheather-image/${type}.png`}
+          width="150px"
+          height="150px"
+        ></img>
+      </div>
+      <div className="tempinfo">
+        {temp}
+        {tempunit}
+      </div>
+
+      <div className="tempstatus">
+        <h3>{type}</h3>
+      </div>
+      <div className="date">
+        {" "}
+        <h5>{moment.unix(date).format(`ll`)}</h5>
+      </div>
+      <div className="location">
+        <i>
+          <span class="material-symbols-outlined">location_on</span>
+        </i>
+        <div>
+          {" "}
+          <h6>{location}</h6>{" "}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Sidebar;

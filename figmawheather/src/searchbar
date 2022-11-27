@@ -1,0 +1,23 @@
+<!-- import React from "react";
+//import { api_current_weather_by_city } from "./components/API";
+
+const Searchbar = (props) => {
+const { query, setQuery } = props;
+
+function closeSearch() {
+props.setOpen(false);
+}
+
+return (
+<div className="searchbar">
+  <input type="text" className="search" value={query} onChange={(e)=> {
+  setQuery(e.target.value.trim());
+  }}
+  ></input>
+  <button className="searchbutton2" onClick={closeSearch}>
+    search
+  </button>
+</div>
+);
+};
+export default Searchbar; -->

@@ -1,13 +1,28 @@
 import React from "react";
 import './App.css';
-import Wheathercard from './components/Wheathercard';
+import Sidebar from "./components/Sidebar";
+import Searchbar from "./components/Searchbar";
+import Dashboard from "./components/Dashboard";
+import DataContextProvider,{ useData } from "./context/DataContext";
 
-function App() {
+
+const Weather = () => {
+  const { openSearch } = useData();
+
   return (
-    <div >
-      <Wheathercard></Wheathercard>
+    <div className="container">
+      {openSearch ? <Searchbar /> : <Sidebar />}
+      <Dashboard></Dashboard>
     </div>
   );
+}
+
+function App() {
+   return (
+     <DataContextProvider>
+       <Weather />
+     </DataContextProvider>
+   );
 }
 
 export default App;

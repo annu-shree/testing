@@ -37,7 +37,8 @@ const Temperature = () => {
                     </h2>
                     <h1 className="temp">{city.temp}°C</h1>
                     <h3 className="tempmin_max">Min: {city.temp_min}°C | Max: {city.temp_max}°C</h3>
-                </div>
+ 
+                        </div>
                 <div className="wave1"></div>
                 <div className="wave2"></div>
                 <div className="wave3"></div>
