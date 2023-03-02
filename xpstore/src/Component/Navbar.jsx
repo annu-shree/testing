@@ -1,58 +1,81 @@
 
 
 import React from 'react'
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     < div className='Navbar'>
-     
-        
-    <div className='store-icon'>
-       <b>Xp</b>store
-    </div>
 
-          <div className='Navbar-link-div'>
-           <NavLink className="Navbar-link"  to="/">
+      <div
+        className='store-icon'
+        style={{
+          borderBottom: "3px solid black",
+          height: "60px",
+          width: "180px"
+        }}>
+        <b> Xp</b>store
+      </div>
+
+      <div
+        className='Navbar-link-div'
+        style={{
+          paddingTop: "25px",
+          display: "flex",
+          flexDirection: "row",
+        }}>
+
+        <div>
+          <NavLink className="Navbar-link" to="/">
             Home
-           </NavLink>
+          </NavLink>
+        </div>
 
-       
-       
-       
-           <NavLink className="Navbar-link"  to="/About">
+        <div>
+          <NavLink className="Navbar-link" to="/About">
             About
-           </NavLink>
-    
+          </NavLink>
+        </div>
 
-   
-           <NavLink className="Navbar-link"  to="/Contact">
+        <div>
+          <NavLink className="Navbar-link" to="/Contact">
             Contact
-           </NavLink>
-    
-    
+          </NavLink>
+        </div>
 
-     
-           <NavLink  className="Navbar-link"  to="/Product">
+        <div>
+          <NavLink className="Navbar-link" to="/Product">
             Product
-           </NavLink>
-          
-           <NavLink className="Navbar-link"  to="/Logout">
-            Logout
-           </NavLink>
-    
-        
-           <NavLink className="wish-link"  to="/whishlist">
-             <img src=".\images\wishlist.png" alt="" width="35px" height="35px"></img>
-           </NavLink>
+          </NavLink>
+        </div>
 
-  
-           <NavLink className="cart-link"  to="/Cart">
-            <img src="./images/shopping-cart.png"    className='cart-img'  alt=""  width="50px"  height="50px"   ></img>
-           </NavLink>
-          
-          </div>    
-     
+        <div>
+          <NavLink className="Navbar-link" to="/Logout">
+            Logout
+          </NavLink>
+        </div>
+
+        <div>
+          <NavLink className="wish-link" to="/wishlist" >
+            <i><span class="material-symbols-outlined">
+              favorite
+            </span></i>
+          </NavLink>
+        </div>
+
+        <div
+          style={{
+            marginLeft: "18px",
+            marginRight: "20px"
+          }}>
+          <NavLink
+            className="cart-link" to="/Cart">
+            <i><span class="material-symbols-outlined">
+              shopping_cart
+            </span></i>
+          </NavLink>
+        </div>
+      </div>
     </div>
   )
 }

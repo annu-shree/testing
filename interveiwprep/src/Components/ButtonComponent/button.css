@@ -1,0 +1,36 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.primary {
+    background-color: #3a8cf7;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.secondary{
+    border: 1px solid black;
+    cursor: pointer;
+}
+.tertiary{
+    font-size: 19px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.tertiary:hover{
+    transform: scale(1.04);
+    border: 2px solid black;
+    font-size: 15px;
+}
+.primary:hover{
+    transform: scale(1.04);
+}
+.secondary:hover{
+  background-color: black;
+  color: white;
+}

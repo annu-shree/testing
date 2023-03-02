@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Whishlist = () => {
+const Callback = () => {
   return (
     <div>
-      
+      1q
     </div>
   )
 }
 
-export default Whishlist
+export default Callback

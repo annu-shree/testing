@@ -1,8 +1,7 @@
 .App {
   text-align: center;
 }
- 
-.App-header {
+ .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex; 
@@ -19,5 +18,4 @@ border-radius: 50px;
 background-color:rgb(127, 172, 255);
 list-style: none;
 margin: 1rem;
-
- }
+}

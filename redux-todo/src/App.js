@@ -1,20 +1,16 @@
- import React, { useState } from 'react'
+import React, { useState } from 'react'
 import { AddTodoAction, RemoveTodoAction,EditTodoAction} from './Actions/TodoAction';
 import { useDispatch, useSelector } from 'react-redux';
 import "./App.css"
-//import {useNavigate} from "react-router-dom"
- 
-
-const App = () => {
+//import {useNavigate} from "react-router-dom"//
+ const App = () => {
 const [todo, setTodo] = useState(''); 
-// const navigate = {useNavigate}  
+// const navigate = {useNavigate} //
 const dispatch = useDispatch()
 const Todo = useSelector(state=>state.Todo);
-
 const {todos}  = Todo;
 const [toggle,setToggle] = useState(true);
 const [edit,setEdit] =useState(null);
-
 function HandleSubmit(e){
     e.preventDefault();
 if(todo && !toggle){
@@ -27,8 +23,7 @@ if(todo && !toggle){
     })
   ) 
 }
-
-    dispatch(AddTodoAction(todo))
+dispatch(AddTodoAction(todo))
     setTodo('')}
 
 function EditHandler(id){ 
@@ -38,16 +33,11 @@ function EditHandler(id){
     }
     return elem;
   });
-
-
   console.log(Editeditem);
    setToggle(false)
    setTodo(Editeditem.todo)  
   setEdit(id)
-    
-  // dispatch(EditTodoAction(id) // //setTodo("")
-}
-
+  }
 function RemoveHandler(t){ 
   dispatch(RemoveTodoAction(t))
 }
@@ -56,8 +46,7 @@ function RemoveHandler(t){
      <header className='App-header' > 
       <h2>TO-DO-APP IN REDUX</h2>
       <form onSubmit={HandleSubmit}>
-        
-        <input
+      <input
         value={todo}
         placeholder='Enter a todo'  
         style={{
@@ -95,7 +84,6 @@ function RemoveHandler(t){
         onSubmit = {HandleSubmit}        
         >EditTodo</button>
       }
-      
       </form>
       <ul className='alltodos'>
         {todos && todos.map((t) =>(
@@ -123,9 +111,7 @@ function RemoveHandler(t){
                }}
                onClick={()=>RemoveHandler(t)}
             >Delete</button>
-             
-             
-             <button type='submit'
+            <button type='submit'
               style={{
               borderRadius:50,
               width:90,
@@ -145,5 +131,4 @@ function RemoveHandler(t){
     </div>
   )
 }
-
 export default App;
