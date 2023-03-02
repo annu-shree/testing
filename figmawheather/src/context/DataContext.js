@@ -18,7 +18,9 @@ const DataContext = React.createContext({
     },
     setCoods: () => { },
     fetchByCoods: false,
-    setFetchType: () => {}
+    setFetchType: () => {},
+    Forecast:[],
+    setForecast: ()=>{}
 })
 
 export const useData = () => React.useContext(DataContext);
@@ -29,14 +31,11 @@ const DataContextProvider = (props) => {
     const [openSearch, setOpenSearch] = React.useState(false);
     const [query, setQuery] = React.useState("London");
     const [unit, setUnit] = React.useState("metric");
-    const [coods, setCoods] = React.useState({
-        latitude: 0,
-        longitude : 0,
-    });
+    const [coods, setCoods] = React.useState({latitude: 0,  longitude : 0});
     const [fetchByCoods , setFetchType] = React.useState(false)
-
+    const[Forecast,setForecast]= React.useState([]);
+                                                        
     const tempunit = unit === "metric" ? "°C" : "°F";
-
     useEffect(() => {
         const fetchData = async () => {
             let response;
@@ -62,7 +61,7 @@ const DataContextProvider = (props) => {
         };
     
         fetchData();
-    }, [query, unit, coods, fetchByCoods]);
+    }, [query, unit, coods, fetchByCoods,Forecast]);
     
     const contextValue = useMemo(() => ({
         data,
@@ -75,9 +74,9 @@ const DataContextProvider = (props) => {
         setUnit,
         tempunit,
         coods, setCoods,
-        fetchByCoods, setFetchType
-
-    }), [data, query, openSearch, unit, tempunit, coods, fetchByCoods]);
+        fetchByCoods, setFetchType,
+        Forecast,setForecast
+    }), [data, query, openSearch, unit, tempunit, coods, fetchByCoods,Forecast]);
     
     return (
         <DataContext.Provider value={contextValue}>

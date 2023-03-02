@@ -1,12 +1,13 @@
 import React from "react";
 import { useData } from "../context/DataContext";
+
 import Weatherforecast from "./Weatherforecast";
 
 const Dashboard = (props) => {
   
-  const { data, unit, setUnit, tempunit } = useData();
+const { data, unit, setUnit, tempunit } = useData();
 const { wind, visibility, humidity, pressure } = data
-  console.log(props);
+console.log(props);
 
   function handlefehrenite() {
     if (unit === "metric") {

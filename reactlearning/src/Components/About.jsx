@@ -5,7 +5,7 @@ const About = () => {
     <div>
       About us
       <li>
-        <Link to="/User/anil"> anil</Link>
+        <Link to="/User/anil/"> anil</Link>
       </li>
       <li>
         <Link to="/User/peter"> peter</Link>

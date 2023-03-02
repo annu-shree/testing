@@ -1,9 +1,13 @@
 import React from 'react'
 import { API_FORECAST_WEATHER_BY_COORDS } from '../components/API';
 //import { getCurrentLocation } from '/.utils';
-  
-  
-const Weatherforecast = () => {
+ import {useData} from "../context/DataContext" 
+ import { getCurrentLocation } from "../utils";
+
+const Weatherforecast = (props) => {
+ 
+const {data,coods,Forecast,setForecast}=useData();
+//const {type,temp,date }
   
   return (
     <div>

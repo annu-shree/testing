@@ -10,6 +10,8 @@ import Filterpage from "./Components/Filterpage"
 import Company from "./Components/Company"
 import Channel from "./Components/Channel";
 import Other from "./Components/Other";
+import Login from "./Components/Login"
+import Protected from "./Components/Protected"
 
 
 function App() {
@@ -18,17 +20,18 @@ function App() {
       <BrowserRouter>
         <Navbar></Navbar>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<Protected Component={Home}/>}>  </Route>
           <Route path="/About" element={<About />}></Route>
           <Route path="/Contact" element={<Contact />}></Route>
           <Route path="/*" element={<Navigate to="/" />}></Route>
-          <Route path="/User/:name" element={<User />}></Route>
-          <Route path="/Filterpage" element={<Filterpage/>}></Route>
+          <Route path="/User/:name" element={<User/>}></Route>
+          <Route path="/Filterpage" element={<Filterpage />}></Route>
           <Route path="Company" element={<Company/>}></Route>
           <Route path="Channel" element={<Channel/>}></Route>
-          <Route path="Other" element={<Other/>}></Route> 
+          <Route path="Other" element={<Other/>}></Route>
+          <Route path="/Login" element={<Login/>}></Route>
           {/* <Route path="/*" element={<Page404/>}></Route> */}
-        </Routes>
+./        </Routes>
       </BrowserRouter>
     </div>
   );

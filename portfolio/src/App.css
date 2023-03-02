@@ -1,38 +1,74 @@
 .App {
   text-align: center;
+  padding: 2rem;
+  background-color: #1E213A;
+  padding: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.html.body {
+  height: 100%;
+  background-color: #1E213A;
+  padding: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.loginform {
+  background-color: white;
+  text-align: center;
+  align-content: center;
+  padding: 1rem;
+  border: 5px solid #16dac6df;
+  height: 550px;
+  width: 400px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logtext {
+  color: rgb(21, 1, 1);
+  font-size: 2.5cm;
 }
 
-.App-link {
-  color: #61dafb;
+.username {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.978);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1rem;
+  color: black;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  border: 2.5px solid black
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.password {
+  box-shadow: 0px 4px 4px rgba(11, 1, 1, 0.994);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1rem;
+  color: #040417;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  border: 2.5px solid black
+}
+
+.loginbutton {
+  background-color: black;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1rem;
+  color:white;
+  width: 130px;
+  height: 40px;
+}
+
+.loginbutton:hover {
+  background-color: #040417;
+  transform: translate(5px, 5px);
+}
+
+.loginimg {
+  height: 10rem;
+  width: 10rem;
+  /* padding-bottom: 2rem; */
+  color: #E7E7EB;
 }

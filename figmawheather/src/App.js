@@ -19,8 +19,8 @@ const Weather = () => {
 
 function App() {
    return (
-     <DataContextProvider>
-       <Weather />
+     <DataContextProvider data={useData()}>
+       <Weather/>
      </DataContextProvider>
    );
 }

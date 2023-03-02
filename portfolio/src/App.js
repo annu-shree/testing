@@ -1,23 +1,25 @@
 
 import './App.css';
+import {BrowserRouter,Routes,Route } from "react-router-dom"
+import Portfolio from './Components/Portfolio';
+import Figmaweather from "./Components/projects/Figmaweather/Figmaweather"
+import Login from "./Components/Login";
+import Home from "./Components/Home"
+import { Navigate } from "react-router-dom"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        {/* <Portfolio></Portfolio> */}
+        <Routes>
+          <Route path="/projects/figmaweather"element={<Figmaweather />}></Route>
+          <Route path="/Home" element={<Home />}></Route>
+           <Route path="/" element={<Login />}></Route> 
+          {/* <Route path="/*" element={<Navigate to="/"></Navigate>}></Route> */}
+          <Route path="/Portfolio" element={<Portfolio />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
